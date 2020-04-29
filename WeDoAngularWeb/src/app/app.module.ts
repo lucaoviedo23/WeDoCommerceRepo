@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import {MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material';
+import {MatInputModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material';
+import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    AddproductsComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,9 @@ import {MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material'
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

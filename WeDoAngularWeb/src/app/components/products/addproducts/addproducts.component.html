@@ -1,0 +1,48 @@
+<div class="mat-card-form-center">
+    <mat-card>
+      <mat-card-title>Producto</mat-card-title>
+      <mat-card-subtitle>Agregar</mat-card-subtitle>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-3">
+            <mat-form-field hintLabel="Max 30 caracteres" appearance="standard">
+              <mat-label>Marca</mat-label>
+              <input matInput #inputMarca maxlength="30">
+              <mat-hint align="end">{{inputMarca.value?.length || 0}}/30</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-3">
+            <mat-form-field hintLabel="Max 30 caracteres" appearance="standard">
+              <mat-label>Nombre</mat-label>
+              <input matInput #inputNombre maxlength="30">
+              <mat-hint align="end">{{inputMarca.value?.length || 0}}/30</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-3">
+            <mat-form-field hintLabel="Max 50 caracteres" appearance="standard">
+              <mat-label>Descripción</mat-label>
+              <input matInput #inputDesc maxlength="50">
+              <mat-hint align="end">{{inputDesc.value?.length || 0}}/50</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-3">
+            <mat-form-field hintLabel="Max 100 caracteres" appearance="standard">
+              <mat-label>Código</mat-label>
+              <input matInput #inputDesc maxlength="50">
+              <mat-hint align="end">{{inputDesc.value?.length || 0}}/100</mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10">
+  
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Aceptar</button>
+        <button mat-raised-button color="basic">Limpiar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

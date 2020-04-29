@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatInputModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material';
 import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
-
+import { AngularFileUploaderModule } from "angular-file-uploader";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { AddproductsComponent } from './components/products/addproducts/addprodu
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    AngularFileUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,31 +4,38 @@
       <mat-card-subtitle>Agregar</mat-card-subtitle>
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-3">
-            <mat-form-field hintLabel="Max 30 caracteres" appearance="standard">
+          <div class="col-sm-2">
+            <mat-form-field  appearance="standard">
               <mat-label>Marca</mat-label>
               <input matInput #inputMarca maxlength="30">
               <mat-hint align="end">{{inputMarca.value?.length || 0}}/30</mat-hint>
             </mat-form-field>
           </div>
-          <div class="col-sm-3">
-            <mat-form-field hintLabel="Max 30 caracteres" appearance="standard">
+          <div class="col-sm-2">
+            <mat-form-field  appearance="standard">
               <mat-label>Nombre</mat-label>
               <input matInput #inputNombre maxlength="30">
               <mat-hint align="end">{{inputNombre.value?.length || 0}}/30</mat-hint>
             </mat-form-field>
           </div>
           <div class="col-sm-3">
-            <mat-form-field hintLabel="Max 50 caracteres" appearance="standard">
+            <mat-form-field  appearance="standard" style="width:280px !important">
               <mat-label>Descripción</mat-label>
               <input matInput #inputDesc maxlength="50">
               <mat-hint align="end">{{inputDesc.value?.length || 0}}/50</mat-hint>
             </mat-form-field>
           </div>
-          <div class="col-sm-3">
-            <mat-form-field hintLabel="Max 100 caracteres" appearance="standard">
+          <div class="col-sm-2">
+            <mat-form-field  appearance="standard">
               <mat-label>Código</mat-label>
               <input matInput #inputCod maxlength="50">
+              <mat-hint align="end">{{inputCod.value?.length || 0}}/100</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-2">
+            <mat-form-field  appearance="standard">
+              <mat-label>Imágen</mat-label>
+              <input matInput #inputImage maxlength="50">
               <mat-hint align="end">{{inputCod.value?.length || 0}}/100</mat-hint>
             </mat-form-field>
           </div>

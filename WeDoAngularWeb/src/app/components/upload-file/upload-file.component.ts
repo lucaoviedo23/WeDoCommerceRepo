@@ -8,10 +8,10 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 })
 export class UploadFileComponent{
   @ViewChild('fileInput',{static: false})
-
   fileInput;
-
   file: File | null = null;
+  files: { [key: string]: File } = null;
+  
   constructor(private _snackBar: MatSnackBar) { }
  
   onClickFileInputButton(): void {
@@ -19,23 +19,24 @@ export class UploadFileComponent{
   }
 
   onChangeFileInput(): void {
-    let files: { [key: string]: File } = this.fileInput.nativeElement.files;
-      if(this.validateFileInput(files[0])){
-        this.file = files[0];
-      }
+    this.files=  this.fileInput.nativeElement.files;
+    if(this.validateFileInput(this.files[0])){
+      this.file = this.files[0];
+    }
+        
       
   }
 
-  validateFileInput(File:any):boolean{
-    let ok = true;
-    if(File.name.length >= 30){
-      ok = false;
+  validateFileInput(file:File):boolean{
+    let isOk=true;
+    if(file.name.length >= 30){
+      isOk=false;
       this._snackBar.open("La imagen necesita un nombre mas corto!","Advertencia!",{
         duration: 4000,
         panelClass: ['snackBar-warning']
       });
     }
-    return ok;
+    return isOk;
   }
   
 

@@ -12,7 +12,7 @@
    background-color:rgb(247, 243, 27) !important;
 }
 
-::ng-deep  .snackBar-warning {
+::ng-deep  .snackBar-atention {
    color: #000000 !important;
    background-color: #FACA27 !important;
 }

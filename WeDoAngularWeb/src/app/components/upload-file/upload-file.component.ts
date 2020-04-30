@@ -31,9 +31,9 @@ export class UploadFileComponent{
     let isOk=true;
     if(file.name.length >= 30){
       isOk=false;
-      this._snackBar.open("La imagen necesita un nombre mas corto!","Advertencia!",{
+      this._snackBar.open("La imagen necesita un nombre mas corto!","Atención!",{
         duration: 4000,
-        panelClass: ['snackBar-warning']
+        panelClass: ['snackBar-atention']
       });
     }
     return isOk;

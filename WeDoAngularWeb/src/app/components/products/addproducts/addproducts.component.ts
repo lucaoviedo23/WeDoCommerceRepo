@@ -12,4 +12,6 @@ export class AddproductsComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
 }

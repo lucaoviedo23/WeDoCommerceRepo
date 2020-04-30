@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { HttpClient, HttpEventType, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-upload-file',
@@ -9,10 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class UploadFileComponent{
   @ViewChild('fileInput',{static: false})
+
   fileInput;
 
   file: File | null = null;
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
  
   onClickFileInputButton(): void {
     this.fileInput.nativeElement.click();
@@ -20,8 +20,24 @@ export class UploadFileComponent{
 
   onChangeFileInput(): void {
     const files: { [key: string]: File } = this.fileInput.nativeElement.files;
-    this.file = files[0];
+      if(this.validateFileInput(files[0])){
+        this.file = files[0];
+      }
+      
   }
+
+  validateFileInput(File:any):boolean{
+    let ok = true;
+    if(File.name.length >= 30){
+      ok = false;
+      this._snackBar.open("La imagen necesita un nombre mas corto!","Advertencia!",{
+        duration: 5000,
+        panelClass: ['snack-warning']
+      });
+    }
+    return ok;
+  }
+  
 
 
 }

@@ -8,6 +8,11 @@
     margin: auto;
 
  }
- .snack-warning{
-background-color: #FACA27 !important;
- }
+ .snack-bar-container.snack-yellow {
+   background-color:rgb(247, 243, 27) !important;
+}
+
+::ng-deep  .snackBar-warning {
+   color: #000000 !important;
+   background-color: #FACA27 !important;
+}

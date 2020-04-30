@@ -19,7 +19,7 @@ export class UploadFileComponent{
   }
 
   onChangeFileInput(): void {
-    const files: { [key: string]: File } = this.fileInput.nativeElement.files;
+    let files: { [key: string]: File } = this.fileInput.nativeElement.files;
       if(this.validateFileInput(files[0])){
         this.file = files[0];
       }
@@ -31,8 +31,8 @@ export class UploadFileComponent{
     if(File.name.length >= 30){
       ok = false;
       this._snackBar.open("La imagen necesita un nombre mas corto!","Advertencia!",{
-        duration: 5000,
-        panelClass: ['snack-warning']
+        duration: 4000,
+        panelClass: ['snackBar-warning']
       });
     }
     return ok;

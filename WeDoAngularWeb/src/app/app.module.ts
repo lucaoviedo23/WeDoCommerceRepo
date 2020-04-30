@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatInputModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material';
 import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
-import { AngularFileUploaderModule } from "angular-file-uploader";
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    AddproductsComponent
+    AddproductsComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    AngularFileUploaderModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

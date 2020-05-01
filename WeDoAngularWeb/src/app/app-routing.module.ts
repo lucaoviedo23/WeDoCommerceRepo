@@ -7,7 +7,7 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    { path: '', component: AddproductsComponent },
+    //{ path: '', component: AddproductsComponent },
   ])],
   exports: [RouterModule]
 })

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule,MatSnackBarModule, MatDialogModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule, MatDialog} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ProductsModule } from './productsModule/products.module';
+import { ProductsModule } from '../productsModule/products.module';
 import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
 import { CommonModule } from '@angular/common';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
@@ -17,14 +17,15 @@ import { EditproductsComponent } from './components/products/editproducts/editpr
   declarations: [
     AppComponent,
     ToolbarComponent,
-    UploadFileComponent,
     AddproductsComponent,
+    UploadFileComponent,
     EditproductsComponent
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    ProductsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -34,11 +35,10 @@ import { EditproductsComponent } from './components/products/editproducts/editpr
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
-    FormsModule,
-    ProductsModule,
-    CommonModule
+    FormsModule
+    
   ],
-  exports:[],
+  exports:[UploadFileComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,20 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatInputModule,MatSnackBarModule, MatDialogModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule, MatDialog} from '@angular/material';
-import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
-import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProductsModule } from './productsModule/products.module';
+import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
+import { CommonModule } from '@angular/common';
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { EditproductsComponent } from './components/products/editproducts/editproducts.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    AddproductsComponent,
     UploadFileComponent,
+    AddproductsComponent,
     EditproductsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,11 @@ import { EditproductsComponent } from './components/products/editproducts/editpr
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
-    FormsModule
+    FormsModule,
+    ProductsModule,
+    CommonModule
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

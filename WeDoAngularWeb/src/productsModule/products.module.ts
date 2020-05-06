@@ -5,15 +5,16 @@ import { AddProductsComponent } from './add-products/add-products.component';
 import {MatInputModule,MatSnackBarModule, MatDialogModule, MatCardModule, MatToolbarModule,MatIconModule,MatButtonModule, MatDialog} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { UploadFileComponent } from 'src/app/components/upload-file/upload-file.component';
 import { EditProductsComponent } from './edit-products/edit-products.component';
+import { UtilsModule } from 'src/utils/utils.module';
 
 
 
 @NgModule({
   declarations: [
    AddProductsComponent,
-   EditProductsComponent],
+   EditProductsComponent
+  ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
@@ -25,7 +26,8 @@ import { EditProductsComponent } from './edit-products/edit-products.component';
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
-    FormsModule
+    FormsModule,
+    UtilsModule
   ],
   exports:[]  
 })

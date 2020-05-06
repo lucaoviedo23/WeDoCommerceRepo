@@ -1,18 +1,21 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { MatDialog, MatSnackBar } from '@angular/material';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-upload-file',
   templateUrl: './upload-file.component.html',
   styleUrls: ['./upload-file.component.css']
 })
-export class UploadFileComponent{
+export class UploadFileComponent implements OnInit {
+
   @ViewChild('fileInput',{static: false})
   fileInput;
   file: File | null = null;
   files: { [key: string]: File } = null;
   
   constructor(private _snackBar: MatSnackBar) { }
+  ngOnInit() {
+  }
  
   onClickFileInputButton(): void {
     this.fileInput.nativeElement.click();

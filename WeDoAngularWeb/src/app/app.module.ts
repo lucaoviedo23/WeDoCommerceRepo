@@ -8,18 +8,12 @@ import {MatInputModule,MatSnackBarModule, MatDialogModule, MatCardModule, MatToo
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductsModule } from '../productsModule/products.module';
-import { AddproductsComponent } from './components/products/addproducts/addproducts.component';
 import { CommonModule } from '@angular/common';
-import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { EditproductsComponent } from './components/products/editproducts/editproducts.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
-    AddproductsComponent,
-    UploadFileComponent,
-    EditproductsComponent
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +32,7 @@ import { EditproductsComponent } from './components/products/editproducts/editpr
     FormsModule
     
   ],
-  exports:[UploadFileComponent],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

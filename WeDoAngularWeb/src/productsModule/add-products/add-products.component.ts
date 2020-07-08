@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { UploadFileComponent } from 'src/app/components/upload-file/upload-file.component';
 
 @Component({
   selector: 'module-products',
